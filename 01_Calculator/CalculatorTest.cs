@@ -25,6 +25,8 @@ namespace _01_Calculator
             int[] numbers = new int[] { };
             Assert.AreEqual(0, Calculator.Sum(numbers));
 
+            numbers = new int[5];
+
             numbers[0] = 7;
             Assert.AreEqual(7, Calculator.Sum(numbers));
 
@@ -33,13 +35,15 @@ namespace _01_Calculator
             Assert.AreEqual(18, Calculator.Sum(numbers));
 
         }
-        //[TestMethod]
-        //public void Multiply()
-        //{
-        //    //It multiplies two numbers
-        //    //It multiplies several numbers
-        //    throw new NotImplementedException();
-        //}
+        [TestMethod]
+        public void Multiply()
+        {
+            //It multiplies two numbers
+            //It multiplies several numbers
+            Assert.AreEqual(0, Calculator.Multiply(0, 0));
+            Assert.AreEqual(6, Calculator.Multiply(3, 2));
+            Assert.AreEqual(24, Calculator.Multiply(3, 2, 4));
+        }
         //[TestMethod]
         //public void Power()
         //{
